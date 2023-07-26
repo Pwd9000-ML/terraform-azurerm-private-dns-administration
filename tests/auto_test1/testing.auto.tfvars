@@ -1,13 +1,9 @@
-# terraform-azurerm-private-dns-administration
-Terraform module for administering AZURE hosted Private DNS zones.
-
-
-```hcl
-#Example Usage
+resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+private_dns_zones   = ["pwd9000.zone1.local", "pwd9000.zone2.local"]
 dns_config = [
   {
-    zone_name           = "myorg.zone1.local"
-    resource_group_name = "rg-where-dns-zone-is-hosted"
+    zone_name           = "pwd9000.zone1.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
     records = [
       #A records example
       { record_no = 1, record_type = "A", record_name = "testA1", ttl = 600, record_value = ["10.0.180.17"] },
@@ -43,8 +39,8 @@ dns_config = [
     ]
   },
   {
-    zone_name           = "myorg.zone2.local"
-    resource_group_name = "rg-where-dns-zone-is-hosted"
+    zone_name           = "pwd9000.zone2.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
     records = [ #add records here as shown above
       { record_no = 1, record_type = "A", record_name = "testB1", ttl = 300, record_value = ["10.0.181.15"] },
       { record_no = 2, record_type = "A", record_name = "testB2", ttl = 300, record_value = ["10.0.181.16"] },
@@ -53,4 +49,3 @@ dns_config = [
     ]
   }
 ]
-```

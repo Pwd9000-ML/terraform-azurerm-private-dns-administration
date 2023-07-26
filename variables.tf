@@ -14,11 +14,13 @@ variable "private_dns_record_type" {
 variable "private_dns_record_name" {
   type        = string
   description = "value of the private dns record name"
+  default     = "testrecord"
 }
 
 variable "resource_group_name" {
   type        = string
   description = "value of the resource group name"
+  default     = "rg-where-zone-is-located"
 }
 
 variable "private_dns_record_ttl" {
@@ -30,11 +32,13 @@ variable "private_dns_record_ttl" {
 variable "private_dns_zone_name" {
   type        = string
   description = "value of the private dns zone name"
+  default     = "myorg.zone.local"
 }
 
 variable "private_dns_record_value" {
   type        = list(any)
   description = "value of the private dns record/s block. Usage of any is due to the fact that each record type has a different structure which can be string:[CNAME], set:[A, AAAA, PTR] or object:[MX, SRV, TXT]"
+  default     = []
 }
 
 variable "tags" {
