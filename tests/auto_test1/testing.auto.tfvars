@@ -1,51 +1,192 @@
 resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
 private_dns_zones   = ["pwd9000.zone1.local", "pwd9000.zone2.local"]
-dns_config = [
+
+# A records Administration example
+dns_a_records = [
   {
+    record_no           = 1
     zone_name           = "pwd9000.zone1.local"
     resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
-    records = [
-      #A records example
-      { record_no = 1, record_type = "A", record_name = "testA1", ttl = 600, record_value = ["10.0.180.17"] },
-      { record_no = 2, record_type = "A", record_name = "testA2", ttl = 600, record_value = ["10.0.180.18"] },
+    record_type         = "A"
+    record_name         = "testA1"
+    ttl                 = 300
+    record_value        = ["10.0.1.10"]
+  },
+  {
+    record_no           = 2
+    zone_name           = "pwd9000.zone2.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "A"
+    record_name         = "testA3"
+    ttl                 = 300
+    record_value        = ["10.0.2.10"]
+  }
+]
 
-      #AAAA records example
-      { record_no = 3, record_type = "AAAA", record_name = "testAAAA1", ttl = 600, record_value = ["fd5d:70bc:930e:d008:0000:0000:0000:7334"] },
-      { record_no = 4, record_type = "AAAA", record_name = "testAAAA2", ttl = 600, record_value = ["fd5d:70bc:930e:d008::7335"] },
+# AAAA records Administration example
+dns_aaaa_records = [
+  {
+    record_no           = 1
+    zone_name           = "pwd9000.zone1.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "AAAA"
+    record_name         = "testAAAA1"
+    ttl                 = 300
+    record_value        = ["fd00:0:0:1::1"]
+  },
+  {
+    record_no           = 2
+    zone_name           = "pwd9000.zone2.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "AAAA"
+    record_name         = "testAAAA3"
+    ttl                 = 300
+    record_value        = ["fd00:0:0:2::1"]
+  }
+]
 
-      #CNAME records example
-      { record_no = 5, record_type = "CNAME", record_name = "testCNAME1", ttl = 400, record_value = "contoso.com" },
-      { record_no = 6, record_type = "CNAME", record_name = "testCNAME2", ttl = 400, record_value = "wingtip.co.uk" },
+# PTR records Administration example
+dns_ptr_records = [
+  {
+    record_no           = 1
+    zone_name           = "pwd9000.zone1.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "PTR"
+    record_name         = "15"
+    ttl                 = 300
+    record_value        = ["test.example.com"]
+  },
+  {
+    record_no           = 2
+    zone_name           = "pwd9000.zone2.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "PTR"
+    record_name         = "16"
+    ttl                 = 300
+    record_value        = ["test2.example.com"]
+  }
+]
 
-      #MX records example
-      { record_no = 7, record_type = "MX", record_name = "exchange1", ttl = 300, record_value = [
-        { preference = 10, exchange = "mx1.contoso.com" },
-        { preference = 20, exchange = "backupmx.contoso.com" }
-      ] },
+# CNAME records Administration example
+dns_cname_records = [
+  {
+    record_no           = 1
+    zone_name           = "pwd9000.zone1.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "CNAME"
+    record_name         = "msservice1"
+    ttl                 = 300
+    record_value        = "contoso.com"
+  },
+  {
+    record_no           = 2
+    zone_name           = "pwd9000.zone2.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "CNAME"
+    record_name         = "msservice2"
+    ttl                 = 300
+    record_value        = "wingtiptoys.com"
+  }
+]
 
-      #PTR records example 
-      { record_no = 8, record_type = "PTR", record_name = "15", ttl = 3600, record_value = ["test.exmple.com"] },
-      { record_no = 9, record_type = "PTR", record_name = "16", ttl = 3600, record_value = ["test2.exmple.com"] },
-
-      #SRV records example
-      { record_no = 10, record_type = "SRV", record_name = "testSRV", ttl = 2400, record_value = [
-        { priority = 1, weight = 5, port = 8080, target = "target1.contoso.com" },
-        { priority = 10, weight = 10, port = 8080, target = "target2.contoso.com" }
-      ] },
-
-      #TXT records example
-      { record_no = 11, record_type = "TXT", record_name = "testTXT1", ttl = 300, record_value = { value = "v=spf1 mx ~all" } },
-      { record_no = 12, record_type = "TXT", record_name = "testTXT2", ttl = 300, record_value = { value = "v=spf2 mx ~all" } }
+# MX records Administration example
+dns_mx_records = [
+  {
+    record_no           = 1
+    zone_name           = "pwd9000.zone1.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "MX"
+    record_name         = "mail1"
+    ttl                 = 300
+    record_value = [
+      { preference = 10, exchange = "mx1.contoso.com" },
+      { preference = 20, exchange = "backupmx.contoso.com" }
     ]
   },
   {
+    record_no           = 2
     zone_name           = "pwd9000.zone2.local"
     resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
-    records = [ #add records here as shown above
-      { record_no = 1, record_type = "A", record_name = "testB1", ttl = 300, record_value = ["10.0.181.15"] },
-      { record_no = 2, record_type = "A", record_name = "testB2", ttl = 300, record_value = ["10.0.181.16"] },
-      { record_no = 3, record_type = "A", record_name = "testB3", ttl = 300, record_value = ["10.0.181.17"] },
-      { record_no = 4, record_type = "A", record_name = "testB4", ttl = 300, record_value = ["10.0.181.18", "10.0.181.19"] }
+    record_type         = "MX"
+    record_name         = "mail2"
+    ttl                 = 300
+    record_value = [
+      { preference = 10, exchange = "mx2.contoso.com" },
+      { preference = 20, exchange = "backupmx2.contoso.com" }
     ]
+  }
+]
+
+# SRV records Administration example
+dns_srv_records = [
+  {
+    record_no           = 1
+    zone_name           = "pwd9000.zone1.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "SRV"
+    record_name         = "_sip._tcp"
+    ttl                 = 300
+    record_value = [
+      {
+        priority = 1
+        weight   = 5
+        port     = 5060
+        target   = "sipserver1.contoso.com"
+      },
+      {
+        priority = 10
+        weight   = 10
+        port     = 5060
+        target   = "sipserver2.contoso.com"
+      }
+    ]
+  },
+  {
+    record_no           = 2
+    zone_name           = "pwd9000.zone2.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "SRV"
+    record_name         = "_sip._tcp"
+    ttl                 = 300
+    record_value = [
+      {
+        priority = 1
+        weight   = 5
+        port     = 5060
+        target   = "sipserver3.contoso.com"
+      },
+      {
+        priority = 10
+        weight   = 10
+        port     = 5060
+        target   = "sipserver4.contoso.com"
+      }
+    ]
+  }
+]
+
+# TXT records Administration example
+dns_txt_records = [
+  {
+    record_no           = 1
+    zone_name           = "pwd9000.zone1.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "TXT"
+    record_name         = "www"
+    ttl                 = 300
+    record_value = {
+      value = "v=spf1 a mx ptr include:contoso.com ~all"
+    }
+  },
+  {
+    record_no           = 2
+    zone_name           = "pwd9000.zone2.local"
+    resource_group_name = "TF-Module-Automated-Tests-DNS-Admin"
+    record_type         = "TXT"
+    record_name         = "www"
+    ttl                 = 300
+    record_value = {
+      value = "v=spf1 a mx ptr include:contoso.com ~all"
+    }
   }
 ]

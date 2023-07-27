@@ -36,9 +36,8 @@ variable "private_dns_zone_name" {
 }
 
 variable "private_dns_record_value" {
-  type        = list(any)
+  type        = any
   description = "value of the private dns record/s block. Usage of any is due to the fact that each record type has a different structure which can be string:[CNAME], set:[A, AAAA, PTR] or object:[MX, SRV, TXT]"
-  default     = []
 }
 
 variable "tags" {
