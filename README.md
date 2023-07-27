@@ -6,7 +6,7 @@
 
 Terraform Registry module for administering **AZURE Private DNS zones**.
 
-See **[coming soon]():**
+See **[coming soon]():**  
 For an example on how to create and administer **Azure Private DNS Zones and records** in a single module.  
 
 See **[coming soon]():**  
