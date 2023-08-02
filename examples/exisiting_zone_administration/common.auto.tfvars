@@ -1,6 +1,3 @@
-resource_group_name = "TF-Module-Dns-Admin-Demo"
-private_dns_zones   = ["example.zone.local"]
-
 # A records Administration example
 dns_a_records = [
   {

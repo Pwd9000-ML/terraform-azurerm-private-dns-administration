@@ -1,21 +1,3 @@
-variable "resource_group_name" {
-  type        = string
-  description = "value of the resource group name here private DNS zones are hosted."
-  default     = "rg-where-zone-is-located"
-}
-
-variable "location" {
-  type        = string
-  description = "value of the location where the resources are located."
-  default     = "uksouth"
-}
-
-variable "private_dns_zones" {
-  type        = list(string)
-  description = "value of the private dns zones to create."
-  default     = ["myorg.zone1.local", "myorg.zone2.local"]
-}
-
 variable "tags" {
   type        = map(string)
   description = "value of the tags"
