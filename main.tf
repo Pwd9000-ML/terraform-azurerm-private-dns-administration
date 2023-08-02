@@ -69,7 +69,7 @@ resource "azurerm_private_dns_srv_record" "private_dns_srv_record" {
       weight   = record.value.weight
       port     = record.value.port
       target   = record.value.target
-    }    
+    }
   }
 }
 
@@ -84,6 +84,6 @@ resource "azurerm_private_dns_txt_record" "private_dns_txt_record" {
     for_each = var.private_dns_record_value
     content {
       value = record.value
-    }    
+    }
   }
 }
