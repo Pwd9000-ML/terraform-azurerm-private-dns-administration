@@ -2,6 +2,8 @@
 
 This example will create private DNS record types: `A` and `CNAME` on an existing **Azure Private DNS Zone**: `["example.zone.local"]` as per the variables configured in `common.auto.tfvars`.  
 
+![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/master/assets/example2.png)
+
 Note that not all record types are required to be specified in the usage of this module, this example only shows record types: `A` and `CNAME`.  
 You only need to specify the record types you want to create/Administer.  
 The `common.auto.tfvars` file in this test is used to pass in the required variables to the module to be tested for all possible record types.  

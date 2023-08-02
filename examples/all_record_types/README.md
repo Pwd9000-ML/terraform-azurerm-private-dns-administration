@@ -1,6 +1,8 @@
 # All Record Types Example
 
-This example will create an **Azure Resource Group** to host two newly created **Azure Private DNS Zones**: `["example1.zone.local", "example2.zone.local"]`. The `Private DNS Zones` will then be configured with all possible options for private DNS record types: `A`, `AAAA`, `CNAME`, `MX`, `PTR`, `SRV` and `TXT` as per the variables configured in `common.auto.tfvars`.  
+This example will create an **Azure Resource Group** to host two newly created **Azure Private DNS Zones**: `["example1.zone.local", "example2.zone.local"]`.  
+
+The `Private DNS Zones` will then be configured with all possible options for private DNS record types: `A`, `AAAA`, `CNAME`, `MX`, `PTR`, `SRV` and `TXT` as per the variables configured in `common.auto.tfvars`.  
 
 ![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/master/assets/example1.png)
 
