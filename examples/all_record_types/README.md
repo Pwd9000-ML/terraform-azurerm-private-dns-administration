@@ -2,13 +2,13 @@
 
 This example will create an **Azure Resource Group** to host two newly created **Azure Private DNS Zones**: `["example1.zone.local", "example2.zone.local"]`. The `Private DNS Zones` will then be configured with all possible options for private DNS record types: `A`, `AAAA`, `CNAME`, `MX`, `PTR`, `SRV` and `TXT` as per the variables configured in `common.auto.tfvars`.  
 
-![image.png]()
+![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/master/assets/example1.png)
 
 Note that not all record types are required to be specified in the usage of this module, this example shows all types.  
 You only need to specify the record types you want to create/Administer.  
 The `common.auto.tfvars` file in this test is used to pass in the required variables to the module to be tested for all possible record types.  
 
-See the example: **[Existing Zone Administration]()**, for an example on how to administer records on an existing `Private DNS Zone`.  
+See the example: **[Existing Zone Administration](https://github.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/tree/master/examples/exisiting_zone_administration)**, for an example on how to administer records on an existing `Private DNS Zone`.  
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

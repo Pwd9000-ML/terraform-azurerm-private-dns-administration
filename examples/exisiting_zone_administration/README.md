@@ -6,7 +6,7 @@ Note that not all record types are required to be specified in the usage of this
 You only need to specify the record types you want to create/Administer.  
 The `common.auto.tfvars` file in this test is used to pass in the required variables to the module to be tested for all possible record types.  
 
-See the example: **[All Record Types]()**, for an example on how to administer all record types.  
+See the example: **[All Record Types](https://github.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/tree/master/examples/all_record_types)**, for an example on how to administer all record types.  
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
