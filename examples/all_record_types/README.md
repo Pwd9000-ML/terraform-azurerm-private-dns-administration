@@ -27,13 +27,13 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_dns-a-records-administration-test"></a> [dns-a-records-administration-test](#module\_dns-a-records-administration-test) | ../.. | n/a |
-| <a name="module_dns-aaaa-records-administration-test"></a> [dns-aaaa-records-administration-test](#module\_dns-aaaa-records-administration-test) | ../.. | n/a |
-| <a name="module_dns-cname-records-administration-test"></a> [dns-cname-records-administration-test](#module\_dns-cname-records-administration-test) | ../.. | n/a |
-| <a name="module_dns-mx-records-administration-test"></a> [dns-mx-records-administration-test](#module\_dns-mx-records-administration-test) | ../.. | n/a |
-| <a name="module_dns-ptr-records-administration-test"></a> [dns-ptr-records-administration-test](#module\_dns-ptr-records-administration-test) | ../.. | n/a |
-| <a name="module_dns-srv-records-administration-test"></a> [dns-srv-records-administration-test](#module\_dns-srv-records-administration-test) | ../.. | n/a |
-| <a name="module_dns-txt-records-administration-test"></a> [dns-txt-records-administration-test](#module\_dns-txt-records-administration-test) | ../.. | n/a |
+| <a name="module_dns-a-records-administration-test"></a> [dns-a-records-administration-test](#module\_dns-a-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
+| <a name="module_dns-aaaa-records-administration-test"></a> [dns-aaaa-records-administration-test](#module\_dns-aaaa-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
+| <a name="module_dns-cname-records-administration-test"></a> [dns-cname-records-administration-test](#module\_dns-cname-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
+| <a name="module_dns-mx-records-administration-test"></a> [dns-mx-records-administration-test](#module\_dns-mx-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
+| <a name="module_dns-ptr-records-administration-test"></a> [dns-ptr-records-administration-test](#module\_dns-ptr-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
+| <a name="module_dns-srv-records-administration-test"></a> [dns-srv-records-administration-test](#module\_dns-srv-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
+| <a name="module_dns-txt-records-administration-test"></a> [dns-txt-records-administration-test](#module\_dns-txt-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
 
 ## Resources
 
