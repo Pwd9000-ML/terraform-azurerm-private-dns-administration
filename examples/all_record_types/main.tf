@@ -24,9 +24,9 @@ resource "azurerm_private_dns_zone" "private_dns" {
   tags                = var.tags
 }
 
-##################################################
-# MODULE TO TEST                                 #
-##################################################
+##########################################
+# MODULE                                 #
+##########################################
 # Administer A records example
 module "dns-a-records-administration-test" {
   for_each                 = { for each in var.dns_a_records : "${each.record_type}-${each.record_no}" => each }
