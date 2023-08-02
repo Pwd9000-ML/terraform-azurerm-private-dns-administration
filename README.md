@@ -8,8 +8,8 @@ Terraform Registry module for administering **AZURE Private DNS zones**.
 
 ![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/master/assets/example1.png)
 
-See **[All Record Types](https://github.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/tree/master/examples/all_record_types)**  
-For an example on how to create and administer **Azure Private DNS Zones and records** in a single module for all DNS record types.  
+See **[All Record Types](https://github.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/tree/master/examples/all_record_types):**  
+For an example on how to create and administer **Azure Private DNS Zones and records** in a single module for all Private DNS record types.  
 
 See **[Existing Zone Administration](https://github.com/Pwd9000-ML/terraform-azurerm-private-dns-administration/tree/master/examples/exisiting_zone_administration:**  
 For an example on how to administer **Azure Private DNS records** on existing **Private DNS Zones**.  
