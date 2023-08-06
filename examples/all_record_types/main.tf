@@ -31,7 +31,7 @@ resource "azurerm_private_dns_zone" "private_dns" {
 module "dns-a-records-administration-test" {
   for_each                 = { for each in var.dns_a_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
@@ -46,7 +46,7 @@ module "dns-a-records-administration-test" {
 module "dns-aaaa-records-administration-test" {
   for_each                 = { for each in var.dns_aaaa_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
@@ -61,7 +61,7 @@ module "dns-aaaa-records-administration-test" {
 module "dns-ptr-records-administration-test" {
   for_each                 = { for each in var.dns_ptr_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
@@ -76,7 +76,7 @@ module "dns-ptr-records-administration-test" {
 module "dns-cname-records-administration-test" {
   for_each                 = { for each in var.dns_cname_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
@@ -91,7 +91,7 @@ module "dns-cname-records-administration-test" {
 module "dns-mx-records-administration-test" {
   for_each                 = { for each in var.dns_mx_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
@@ -106,7 +106,7 @@ module "dns-mx-records-administration-test" {
 module "dns-srv-records-administration-test" {
   for_each                 = { for each in var.dns_srv_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
@@ -121,7 +121,7 @@ module "dns-srv-records-administration-test" {
 module "dns-txt-records-administration-test" {
   for_each                 = { for each in var.dns_txt_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type

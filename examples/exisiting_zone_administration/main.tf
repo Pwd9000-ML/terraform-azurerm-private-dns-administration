@@ -14,7 +14,7 @@ provider "azurerm" {
 module "dns-a-records-administration-test" {
   for_each                 = { for each in var.dns_a_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
@@ -28,7 +28,7 @@ module "dns-a-records-administration-test" {
 module "dns-cname-records-administration-test" {
   for_each                 = { for each in var.dns_cname_records : "${each.record_type}-${each.record_no}" => each }
   source                   = "Pwd9000-ML/private-dns-administration/azurerm"
-  version                  = "1.0.0"
+  version                  = ">= 1.0.0"
   private_dns_zone_name    = each.value.zone_name
   resource_group_name      = each.value.resource_group_name
   private_dns_record_type  = each.value.record_type
