@@ -23,8 +23,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_dns-a-records-administration-test"></a> [dns-a-records-administration-test](#module\_dns-a-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
-| <a name="module_dns-cname-records-administration-test"></a> [dns-cname-records-administration-test](#module\_dns-cname-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | 1.0.0 |
+| <a name="module_dns-a-records-administration-test"></a> [dns-a-records-administration-test](#module\_dns-a-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | >= 1.0.0 |
+| <a name="module_dns-cname-records-administration-test"></a> [dns-cname-records-administration-test](#module\_dns-cname-records-administration-test) | Pwd9000-ML/private-dns-administration/azurerm | >= 1.0.0 |
 
 ## Resources
 
